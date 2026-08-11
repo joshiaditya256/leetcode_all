@@ -12,12 +12,9 @@
 class Solution {
 public:
     int maxDepth(TreeNode* root) {
-     
-if (root == nullptr) return 0; // empty tree has depth 0
-int leftDepth = maxDepth(root->left);
-int rightDepth = maxDepth(root->right);
-return 1 + max(leftDepth, rightDepth); // count this node, plus the deeper subtree
-}
-
-    
+        if (root == nullptr) return 0;
+        int leftdepth = maxDepth(root->left);
+        int rightdepth = maxDepth(root->right);
+        return 1 + max(leftdepth,rightdepth);
+    }
 };
